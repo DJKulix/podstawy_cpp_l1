@@ -48,12 +48,12 @@ Ważną funkcjonalnością każdego języka jest możliwość pisania komentarzy
 ```cpp
 // Stworzenie zmiennej a
 int a = 5 // Przypisanie wartości 5 do zmiennej a
-print(a)
+cout << a;
 a = 62
-//print(a + 2) --> Ta linijka sie nie wykona
+//cout << (a + 2); --> Ta linijka sie nie wykona
 ```
 
-Możemy także stworzyć komentarz który zakomentuje jakiś fragment kodu, a nie tylko daną linijkę. W tym celu używamy znaków `/*` do otwarcia komentarza i znaków `\*` do jego zamknięcia.
+Możemy także stworzyć komentarz który zakomentuje jakiś fragment kodu, a nie tylko daną linijkę. W tym celu używamy znaków `/*` do otwarcia komentarza i znaków `*/` do jego zamknięcia.
 ```cpp
 /*
 a = 32
@@ -62,8 +62,8 @@ jest dobrze, albo że nie dobrze
 Gdybym miał powiedzieć co cenię w życiu najbardziej
 Powiedziałbym, że ludzi.
 */
-a = 5 + 32
-print(a)
+int a = 5 + 32;
+cout << a;
 ```
 Przed każdym następnym zadaniem będziemy używać komentarza z numerem zadania.
 
@@ -92,8 +92,8 @@ cout << 4/0 << endl;
 | x * y               | iloczyn x oraz y |
 | x / y               | iloraz x oraz y  |
 | x % y               | reszta z dzielenia x / y  |
-| x++        | zwiększenie x o 1  |
-| x--      | zmniejszenie x o 1  |
+| x++        | zwiększenie x o 1 (inkrementacja)  |
+| x--      | zmniejszenie x o 1 (dekrementacja) |
 
 
 | Operator porównania | opis             |
@@ -143,7 +143,8 @@ Tworzenie zmiennej odbywa się w **dwóch etapach**:
 
 ### Modyfikacja wartości zmiennej
 
-Zmiana wartości zmiennej **nie wymaga ponownego podawania typu** – wystarczy nazwa zmiennej i nowa wartość.
+Zmiana wartości zmiennej **nie wymaga ponownego podawania typu** – wystarczy nazwa zmiennej i nowa wartość. Zmienna nie może w locie zmienić swojego typu np.
+nie możemy przypisać do zmiennej typu `int` wartości tekstowej np. `tekst`.
 
 ```cpp
 int liczba = 5;
@@ -174,7 +175,7 @@ error: expected an identifier
 ```
 >C++ to język programowania z uwzględnieniem wielkości liter. Tak więc, Nazwisko i nazwisko to dwie różne nazwy zmiennych w c++.
 Próba odniesienia do zmiennej, która nie została przypisana powoduje błąd.
-```C++
+```cpp
 string foo = "napis";
 cout << foo << endl;
 'napis'
@@ -194,7 +195,6 @@ int x;
 cout << "Podaj liczbe: "; //Podaj liczbe i nacisnij enter
 cin >>  x;
 cout << "Twoja liczba to: " << x;
-
 
 ```
 ### Zadanie 3
