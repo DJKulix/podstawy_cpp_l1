@@ -1,5 +1,6 @@
 # Podstawy programowania w C++
 
+https://www.open-collab.tools/playground/?room=Afm4cz1dwsfkyl9074480ueH
 ## Struktura programu
 
 Każdy program w C++ ma określoną strukturę. Podstawowe elementy kodu to:
