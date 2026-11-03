@@ -59,7 +59,7 @@ W języku C++ średnik `;` oznacza koniec instrukcji. Można go porównać do kr
 Nie jest także używany w nagłówkach np. przy tworzeniu pętli albo sprawdzaniu warunku.
 Dzięki średnikowi komputer wie, gdzie kończy się jedna instrukcja, a zaczyna następna.
 
-![Sr](semicolon.jpg)
+![Se](semicolon.jpg)
 
 
 
