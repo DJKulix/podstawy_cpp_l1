@@ -1,6 +1,5 @@
 # Podstawy programowania w C++
 
-https://www.open-collab.tools/playground/?room=Afm4cz1dwsfkyl9074480ueH
 ## Struktura programu
 
 Każdy program w C++ ma określoną strukturę. Podstawowe elementy kodu to:
@@ -30,17 +29,39 @@ cout << "Hello there";
 // Bez uzycia przestrzeni nazw
 std::cout << "General Kenobi";
 ```
+`cout` służy do wyświetlania informacji na ekranie komputera, np. tekstu, liczb lub wyników działań matematycznych.
+Pochodzi od angielskiego character output.
+
+Składnia poleceina:
+```c++
+cout << "Tekst do wyswietlenia" << endl ;
+```
+
+- cout – polecenie wyświetlające dane na ekranie.
+- << – operator przekazujący dane do wyświetlenia. Oddzielamy nim inne funkcje.
+- "Tekst do wyswietlenia" – tekst, który chcemy pokazać.
+- `endl` - służy do przejścia do nowej linii podczas wyświetlania tekstu na ekranie.
+- `;` – kończy instrukcję.
 
 Kolejnym elementem naszego programu będzie funkcja główna `main`. Jest to pierwsza funkcja uruchamiana podczas działania programu. Funkcja ta przyjmuje typ liczby całkowitej i zwraca wartość 0 w przypadku gdy program wykona się poprawnie. 
 
 ```cpp
 int main(){
     //W tym miejscu pojawi sie kod programu
-
+    cout << "Siema" << endl; 
 
     return 0;
 }
 ```
+### Średnik
+W języku C++ średnik `;` oznacza koniec instrukcji. Można go porównać do kropki na końcu zdania w języku polskim.
+Średnika nie używa się po instrukcjach, które otwierają blok kodu, czyli przed nawiasem klamrowym `{`. 
+Nie jest także używany w nagłówkach np. przy tworzeniu pętli albo sprawdzaniu warunku.
+Dzięki średnikowi komputer wie, gdzie kończy się jedna instrukcja, a zaczyna następna.
+
+![Sr](semicolon.jpg)
+
+
 
 ### Komentarze
 
@@ -54,7 +75,7 @@ a = 62
 //cout << (a + 2); --> Ta linijka sie nie wykona
 ```
 
-Możemy także stworzyć komentarz który zakomentuje jakiś fragment kodu, a nie tylko daną linijkę. W tym celu używamy znaków `/*` do otwarcia komentarza i znaków `*/` do jego zamknięcia.
+Możemy także stworzyć komentarz, który zakomentuje jakiś fragment kodu, a nie tylko daną linijkę. W tym celu używamy znaków `/*` do otwarcia komentarza i znaków `*/` do jego zamknięcia.
 ```cpp
 /*
 a = 32
@@ -77,7 +98,7 @@ Skopiuj zawartość pliku `template.cpp` do pliku `main.cpp`. Używając instruk
 
 
 ## Proste operacje
-C++ ma zdolność do wykonywania obliczeń. Tak jak we wcześniejszym przykładzie, działania matematyczne możemy bezpośrednio wypisywać w instrukcji "cout".
+C++ ma zdolność do wykonywania obliczeń. Tak jak we wcześniejszym przykładzie, działania matematyczne możemy bezpośrednio wypisywać w instrukcji `cout`.
 ```cpp
 cout << 4+5 << endl;
 cout << 4*6 << endl;
@@ -186,7 +207,9 @@ identifier "bar" is undefined
 >Zmienne `foo` i `bar` są używane jako nazwy zastępcze w przykładowym kodzie, aby coś zademonstrować. 
 
 ### Zadanie 3
-Utwórz zmienną `imie` i przypisz do niej swoje imię. Utwórz zmienną `wiek` do której przypisz swój wiek. Dobierz odpowiedni typ zmiennej. Wypisz obie zmienne w postaci "Jestem {{imie}} i mam {{lat}}". 
+Utwórz zmienną `moje_imie` i przypisz do niej swoje imię. Utwórz zmienną `moj_wiek` do której przypisz swój wiek. Dobierz odpowiedni typ zmiennej. Wypisz obie zmienne w postaci "Jestem {{imie}} i mam {{lat}} lat".
+Przykładowe działanie:
+>Jestem John i mam 30 lat.
 
 
 ## Wprowadzanie danych
@@ -198,14 +221,26 @@ cin >>  x;
 cout << "Twoja liczba to: " << x;
 
 ```
-### Zadanie 3
+>Do wprowadzaniu danych za pomocą `cin` używamy odwróconego nawiasu trójkątnego. Można sobie wyobrazić kierunek przesyłania danych
+>  z wejścia --> do zmiennej
+>  na wyjście <-- jakieś dane
+### Zadanie 4
 Napisz program, który zapyta użytkownika o imię, a potem wyświetli powitanie z wykorzystaniem podanego imienia.
 
 
-### Zadanie 4
-Stwórz zmienne `a` oraz `b` i przypisz do nich dwie dowolne liczby. Dodaj zmienną wynik do której przypiszesz wynik działania: `2 * a + b^2`. Wypisz obie zmienne oraz wynik. 
-
 ### Zadanie 5
+Stwórz zmienne `a` oraz `b` i przypisz do nich dwie dowolne liczby. Dodaj zmienną `wynik` do której przypiszesz wynik działania: `2 * a + b^2`. Wypisz obie zmienne oraz wynik. 
+
+### Zadanie 6
 Stwórz zmienne `x` oraz `y`. Wartości mają zostać podane przez użytkownika przy pomocji funkcji `cin`. Na podanych liczbach wykonaj dwa dowolne działania matematyczne i wypisz wyniki.
 
 ![Ce](charizard.jpg)
+
+
+### Ciekawostka
+W C++ istnieje insturkcja `define`, która służy do definiowania stałych lub skrótów, 
+które kompilator zastępuje określoną wartością lub tekstem jeszcze przed kompilacją programu.
+Taką instruckję można wykorzystać np. do tworzenia stałych wartości albo skrócenia czegoś.
+
+
+![Af](toto.png)

@@ -3,8 +3,7 @@
 using namespace std;
 
 int main(){
-
-    cout << bar;
+    cout << "Czesc!" << endl;
 
     return 0;
 }
