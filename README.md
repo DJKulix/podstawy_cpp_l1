@@ -7,10 +7,10 @@ Każdy program w C++ ma określoną strukturę. Podstawowe elementy kodu to:
 ```cpp
 #include <iostream> 
 ```
-Dołączenie standardowej biblioteki "iostream" \
-i - input - wejście \
-o - output - wyjćcie \
-stream - strumień
+Dołączenie standardowej biblioteki _iostream_ \
+`i` - input - wejście \
+`o` - output - wyjście \
+`stream` - strumień
 
 ```cpp
 using namespace std;
@@ -32,14 +32,14 @@ std::cout << "General Kenobi";
 `cout` służy do wyświetlania informacji na ekranie komputera, np. tekstu, liczb lub wyników działań matematycznych.
 Pochodzi od angielskiego character output.
 
-Składnia poleceina:
+Składnia polecenia:
 ```c++
 cout << "Tekst do wyswietlenia" << endl ;
 ```
 
-- cout – polecenie wyświetlające dane na ekranie.
-- << – operator przekazujący dane do wyświetlenia. Oddzielamy nim inne funkcje.
-- "Tekst do wyswietlenia" – tekst, który chcemy pokazać.
+- `cout` – polecenie wyświetlające dane na ekranie.
+- `<<` – operator przekazujący dane do wyświetlenia. Oddzielamy nim inne funkcje.
+- `"Tekst do wyswietlenia"` – tekst, który chcemy pokazać.
 - `endl` - służy do przejścia do nowej linii podczas wyświetlania tekstu na ekranie.
 - `;` – kończy instrukcję.
 
@@ -65,7 +65,7 @@ Dzięki średnikowi komputer wie, gdzie kończy się jedna instrukcja, a zaczyna
 
 ### Komentarze
 
-Ważną funkcjonalnością każdego języka jest możliwość pisania komentarzy, czyli fragmentów programu które nie są wykonywane. W komentarzach możemy umieszczać wyjaśnienie poszczególnych częsci, albo tworzyć własne notatki na później. W C++ do komentowania używa się znaków `//`. Wszystko po tym znaku w danej linii zostanie zakomentowane, i program nie wykona tej częsci. W niektórych środowiskach komentarz można wykonać za pomocą odpowiedniego skrótu klawiszowego, np. `CTRL + /`.
+Ważną funkcjonalnością każdego języka jest możliwość pisania komentarzy, czyli fragmentów programu, które nie są wykonywane. W komentarzach możemy umieszczać wyjaśnienie poszczególnych części albo tworzyć własne notatki na później. W C++ do komentowania używa się znaków `//`. Wszystko po tym znaku w danej linii zostanie zakomentowane i program nie wykona tej części. W niektórych środowiskach komentarz można wykonać za pomocą odpowiedniego skrótu klawiszowego, np. `CTRL + /`.
 
 ```cpp
 // Stworzenie zmiennej a
@@ -91,7 +91,7 @@ Przed każdym następnym zadaniem będziemy używać komentarza z numerem zadani
 
 
 ### Zadanie 1
-Skopiuj zawartość pliku `template.cpp` do pliku `main.cpp`. Używając instrukcji `cout` wypisz napis "Hello world!". Dodaj trzy kolejne instrukcje które wypiszą:
+Skopiuj zawartość pliku `template.cpp` do pliku `main.cpp`. Używając instrukcji `cout` wypisz napis "Hello world!". Dodaj trzy kolejne instrukcje, które wypiszą:
 - Dzisiejszą datę
 - Napis "Operacje na liczbach"
 - Działanie 4 + 5
@@ -107,32 +107,32 @@ cout << 4/0 << endl;
 > W C++ jeśli kompilacja się nie powiedzie, to po uruchomieniu programu zostanie wyświetlony komunikat z błędem np. `divide or mod by zero`.
 
 ### Operatory
-| Operator numeryczny | opis             |
-|---------------------|------------------|
-| x + y               | suma x oraz y    |
-| x - y               | różnica x oraz y |
-| x * y               | iloczyn x oraz y |
-| x / y               | iloraz x oraz y  |
-| x % y               | reszta z dzielenia x / y  |
-| x++        | zwiększenie x o 1 (inkrementacja)  |
-| x--      | zmniejszenie x o 1 (dekrementacja) |
+| Operator numeryczny | opis                               |
+|---------------------|------------------------------------|
+| x + y               | suma x oraz y                      |
+| x - y               | różnica x oraz y                   |
+| x * y               | iloczyn x oraz y                   |
+| x / y               | iloraz x oraz y                    |
+| x % y               | reszta z dzielenia x / y           |
+| x++                 | zwiększenie x o 1 (inkrementacja)  |
+| x--                 | zmniejszenie x o 1 (dekrementacja) |
 
 
-| Operator porównania | opis             |
-|---------------------|------------------|
-| x != y               | rózne    |
-| x == y               | równe |
-| x > y                | większe |
-| x < y                | mniejsze  |
-| x >= y               | większe lub równe  |
-| x <= y               | mniejsze lub równe  |
+| Operator porównania | opis               |
+|---------------------|--------------------|
+| x != y              | rózne              |
+| x == y              | równe              |
+| x > y               | większe            |
+| x < y               | mniejsze           |
+| x >= y              | większe lub równe  |
+| x <= y              | mniejsze lub równe |
 
 
 ### Zadanie 2
 
 - Wypróbuj działania arytmetyczne z tabeli "Operatory" dla dwóch dowolnych liczb wykorzystując instrukcję cout.
 - Sprawdź działanie operatorów porównania. Co zostało wypisane na konsoli?
-- Porównaj dwie liczby: (0.222222222222222222224 == 0.2222222222222222222222225). Jaki jest wynik działnia programu? Co powoduje zwrócenie takiego wyniku?
+- Porównaj dwie liczby: (0.222222222222222222224 == 0.2222222222222222222222225). Jaki jest wynik działania programu? Co powoduje zwrócenie takiego wyniku?
 
 ## Zmienne
 
@@ -153,13 +153,13 @@ Tworzenie zmiennej odbywa się w **dwóch etapach**:
 
 ### Podstawowe typy zmiennych w C++
 
-| Typ      | Opis                          | Przykład        |
-|----------|-------------------------------|-----------------|
-| `int`    | liczba całkowita               | `10`            |
-| `char`   | pojedynczy znak                | `'A'`           |
-| `string` | ciąg znaków (tekst)            | `"C++"`         |
-| `double` | liczba rzeczywista             | `3.14`          |
-| `bool`   | wartość logiczna (prawda/fałsz)| `true`, `false` |
+| Typ      | Opis                            | Przykład        |
+|----------|---------------------------------|-----------------|
+| `int`    | liczba całkowita                | `10`            |
+| `char`   | pojedynczy znak                 | `'A'`           |
+| `string` | ciąg znaków (tekst)             | `"C++"`         |
+| `double` | liczba rzeczywista              | `3.14`          |
+| `bool`   | wartość logiczna (prawda/fałsz) | `true`, `false` |
 
 ---
 
@@ -173,15 +173,14 @@ int liczba = 5;
 liczba = 10;
 ```
 
-Zmienne wypisujemy tak samo jak tekst w instrukcji `cout` ale bez użycia znaku cudzysłowia:
+Zmienne wypisujemy tak samo, jak tekst w instrukcji `cout` ale bez użycia znaku cudzysłowu:
 
 ```cpp
 int liczba = 5;
 cout << liczba << endl; //Zostanie wypisane 5
-
 ```
 
-Możemy łączyć wypisywanie zmiennych oraz tekstu np:
+Możemy łączyć wypisywanie zmiennych oraz tekstu np.:
 ```cpp
 int liczba = 5;
 cout << "Wybrana liczba to: " << liczba << endl;
@@ -195,6 +194,8 @@ int 123abc = 7;
 
 error: expected an identifier
 ```
+
+
 >C++ to język programowania z uwzględnieniem wielkości liter. Tak więc, Nazwisko i nazwisko to dwie różne nazwy zmiennych w c++.
 Próba odniesienia do zmiennej, która nie została przypisana powoduje błąd.
 ```cpp
@@ -221,9 +222,9 @@ cin >>  x;
 cout << "Twoja liczba to: " << x;
 
 ```
->Do wprowadzaniu danych za pomocą `cin` używamy odwróconego nawiasu trójkątnego. Można sobie wyobrazić kierunek przesyłania danych
->  z wejścia --> do zmiennej
->  na wyjście <-- jakieś dane
+>Do wprowadzania danych za pomocą `cin` używamy odwróconego nawiasu trójkątnego. Można sobie wyobrazić kierunek przesyłania danych: <br>
+>z wejścia --> do zmiennej<br>
+>na wyjście <-- jakieś dane  
 ### Zadanie 4
 Napisz program, który zapyta użytkownika o imię, a potem wyświetli powitanie z wykorzystaniem podanego imienia.
 
@@ -232,15 +233,15 @@ Napisz program, który zapyta użytkownika o imię, a potem wyświetli powitanie
 Stwórz zmienne `a` oraz `b` i przypisz do nich dwie dowolne liczby. Dodaj zmienną `wynik` do której przypiszesz wynik działania: `2 * a + b^2`. Wypisz obie zmienne oraz wynik. 
 
 ### Zadanie 6
-Stwórz zmienne `x` oraz `y`. Wartości mają zostać podane przez użytkownika przy pomocji funkcji `cin`. Na podanych liczbach wykonaj dwa dowolne działania matematyczne i wypisz wyniki.
+Stwórz zmienne `x` oraz `y`. Wartości mają zostać podane przez użytkownika przy promocji funkcji `cin`. Na podanych liczbach wykonaj dwa dowolne działania matematyczne i wypisz wyniki.
 
 ![Ce](charizard.jpg)
 
 
 ### Ciekawostka
-W C++ istnieje insturkcja `define`, która służy do definiowania stałych lub skrótów, 
+W C++ istnieje instrukcja `define`, która służy do definiowania stałych lub skrótów, 
 które kompilator zastępuje określoną wartością lub tekstem jeszcze przed kompilacją programu.
-Taką instruckję można wykorzystać np. do tworzenia stałych wartości albo skrócenia czegoś.
+Taką instrukcję można wykorzystać np. do tworzenia stałych wartości albo skrócenia czegoś.
 
 
 ![Af](toto.png)
